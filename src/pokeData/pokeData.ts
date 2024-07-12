@@ -23,6 +23,7 @@ export interface iPokemon {
     type: tPokemonTypes
     totalUses: number
   }[]
+  animation: 'fire' | 'water' | 'grass'
 }
 
 
@@ -32,6 +33,7 @@ export const pokemonsGen1:iPokemon[] = [
     imagePath:'/charmander.png',
     previewPath:'/preview-charmander.gif',
     backGroundPath:'/background-canyon.jpg',
+    animation:'fire',
     mainColor: '#FA4533',
     secondaryColor:'#9D271B',
     evolutions: ['Charmander', 'Charmeleon', 'Charizard'],
@@ -68,6 +70,7 @@ export const pokemonsGen1:iPokemon[] = [
     imagePath:'/squirtle.png',
     previewPath:'/preview-squirtle.gif',
     backGroundPath:'/background-coast.jpg',
+    animation:'water',
     mainColor: '#33AFFA',
     secondaryColor:'#1B71A5',
     evolutions: ['Squirtle', 'Wartortle', 'Blastoise'],
@@ -104,6 +107,7 @@ export const pokemonsGen1:iPokemon[] = [
     imagePath:'/bulbasour.png',
     previewPath:'/preview-bulbasour.gif',
     backGroundPath:'/background-forest.jpg',
+    animation:'grass',
     mainColor:'#33FA8A',
     secondaryColor:'#1DA559',
     evolutions: ['Bulbassauro', 'Ivyssauro', 'Venussauro'],

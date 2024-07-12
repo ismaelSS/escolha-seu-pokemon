@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { commonAnimationSettings } from "..";
 
 
-const PokemonName = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function PokemonName(){
   const {name} = useGenOne().pokemonselected
   const pokemonNameRef = useRef<HTMLDivElement>(null)
 
@@ -16,8 +16,6 @@ const PokemonName = forwardRef<HTMLDivElement, {}>((props, ref) => {
     },{
       x:0,
       scrollTrigger:{
-        //@ts-ignore
-        trigger:ref.current,
         ...commonAnimationSettings.secondTrigger
       }
     })
@@ -31,8 +29,4 @@ const PokemonName = forwardRef<HTMLDivElement, {}>((props, ref) => {
     </PokemonNameStyle>
   )
 
-});
-
-PokemonName.displayName = 'PokemonName';
-
-export default PokemonName;
+};

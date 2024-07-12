@@ -11,14 +11,28 @@ interface iPokeProviderType {
   pokemonselected: iPokemon;
   nextPokemon: iPokemon;
   setPokemon: () => void;
+  playAnimation: () => void;
   mainContainerRef: MutableRefObject<null>
+  isActiveAnimation: boolean
 }
 
 const GenOneContext = createContext<iPokeProviderType | undefined>(undefined);
 
 export const GenOneProvider: React.FC<tGen1ContextProps> = ({ children }) => {
   const [pokemonIndex, setPokemonIndex] = useState(0);
+  const [isActiveAnimation, setIsActiveAnimation] =useState(false)
   const mainContainerRef = useRef(null)
+
+  const playAnimation = () =>{
+
+    if(isActiveAnimation === false){
+      setIsActiveAnimation(true)
+
+      setTimeout(() => {
+        setIsActiveAnimation(false);
+      }, 3100);
+    }
+  }
 
   const setPokemon = () => {
     setPokemonIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
@@ -35,7 +49,9 @@ export const GenOneProvider: React.FC<tGen1ContextProps> = ({ children }) => {
         pokemonselected: selectedPokemon,
         nextPokemon: nextPokemon,
         setPokemon,
-        mainContainerRef:mainContainerRef
+        playAnimation:playAnimation,
+        isActiveAnimation:isActiveAnimation,
+        mainContainerRef:mainContainerRef,
       }}>
       {children}
     </GenOneContext.Provider>

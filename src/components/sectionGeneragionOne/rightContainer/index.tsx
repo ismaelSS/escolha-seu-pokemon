@@ -3,15 +3,11 @@ import NextPokemonImage from "../nextPokemonImage";
 import NextPokemonBasicInformations from "../nextPokemonInformation";
 import { RightContainerStyle } from "./styles";
 
-const RightContainer = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function RightContainer(){
   return (
     <RightContainerStyle>
-      <NextPokemonBasicInformations ref={ref}/>
-      <NextPokemonImage ref={ref} />
+      <NextPokemonBasicInformations/>
+      <NextPokemonImage/>
     </RightContainerStyle>
   );
-});
-
-RightContainer.displayName = 'RightContainer';
-
-export default RightContainer;
+};

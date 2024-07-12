@@ -8,7 +8,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { commonAnimationSettings } from '..';
 
-const NextPokemonBasicInformations = forwardRef<HTMLDivElement>((props, ref) => {
+export default function NextPokemonBasicInformations(){
   const { secondaryColor, name, types } = useGenOne().nextPokemon;
   const nextPokemonInformationsRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
@@ -16,7 +16,7 @@ const NextPokemonBasicInformations = forwardRef<HTMLDivElement>((props, ref) => 
 
   useEffect(() => {
     //@ts-ignore
-    if (ref && ref.current && nextPokemonInformationsRef.current) {
+    if (nextPokemonInformationsRef.current) {
         gsap.fromTo(nextPokemonInformationsRef.current, {
           x: -200,
           opacity: 0.5
@@ -25,8 +25,6 @@ const NextPokemonBasicInformations = forwardRef<HTMLDivElement>((props, ref) => 
           x:0,
           opacity: 1,
           scrollTrigger: {
-            //@ts-ignore
-            trigger: ref.current,
             ...commonAnimationSettings.firstTrigger
           },
         }
@@ -39,8 +37,6 @@ const NextPokemonBasicInformations = forwardRef<HTMLDivElement>((props, ref) => 
       y:0,
       opacity:1,
       scrollTrigger:{
-        //@ts-ignore
-        trigger: ref.current,
         ...commonAnimationSettings.secondTrigger
       },
     });
@@ -52,12 +48,7 @@ const NextPokemonBasicInformations = forwardRef<HTMLDivElement>((props, ref) => 
       opacity:1,
       ease:'Power2.out',
       scrollTrigger:{
-        //@ts-ignore
-        trigger:ref.current,
-        start:'20% center',
-        end:'45% center',
-        markers:true,
-        scrub:true,
+        ...commonAnimationSettings.secondTrigger
       },
     })
     }
@@ -79,8 +70,4 @@ const NextPokemonBasicInformations = forwardRef<HTMLDivElement>((props, ref) => 
       </div>
     </NextPokemonBasicInformationsStyle>
   );
-});
-
-NextPokemonBasicInformations.displayName = 'NextPokemonBasicInformations';
-
-export default NextPokemonBasicInformations;
+};

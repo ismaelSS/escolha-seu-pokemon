@@ -3,16 +3,12 @@ import MainCard from "../mainCard"
 import PokemonInformations from "../pokemonInformations"
 import { LeftContainerStyle } from "./styles"
 
-const LeftContainer = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function LeftContainer(){
   return (
     <LeftContainerStyle>
-      <MainCard ref={ref}/>
-      <PokemonInformations ref={ref}/>
+      <MainCard/>
+      <PokemonInformations/>
     </LeftContainerStyle>
   );
-});
-
-LeftContainer.displayName = 'LeftContainer';
-
-export default LeftContainer;
+};
 

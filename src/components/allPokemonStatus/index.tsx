@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { commonAnimationSettings } from "../sectionGeneragionOne";
 
 
-const AllPokemonStatus = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function AllPokemonStatus() {
   const { statusBase } = useGenOne().pokemonselected;
   const statusRef = useRef<HTMLDivElement>(null);
 
@@ -16,8 +16,6 @@ const AllPokemonStatus = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        //@ts-ignore
-        trigger: ref.current,
         ...commonAnimationSettings.thirdTrigger
       }
     });
@@ -37,8 +35,4 @@ const AllPokemonStatus = forwardRef<HTMLDivElement, {}>((props, ref) => {
       ))}
     </AllPokemonStatusStyle>
   );
-});
-
-AllPokemonStatus.displayName = 'AllPokemonStatus';
-
-export default AllPokemonStatus;
+};

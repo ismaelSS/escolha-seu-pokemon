@@ -8,7 +8,7 @@ import { commonAnimationSettings } from "..";
 
 
 
-const MiniPreview = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function MiniPreview() {
 
   const {previewPath, backGroundPath} = useGenOne().pokemonselected
 
@@ -24,8 +24,6 @@ const MiniPreview = forwardRef<HTMLDivElement, {}>((props, ref) => {
       y:0,
       ease:'power2.out',
       scrollTrigger:{
-        //@ts-ignore
-        trigger:ref.current,
         ...commonAnimationSettings.secondTrigger
       }
 
@@ -44,8 +42,4 @@ const MiniPreview = forwardRef<HTMLDivElement, {}>((props, ref) => {
     </MiniPreviewStyle>
   )
 
-});
-
-MiniPreview.displayName = 'MiniPreview';
-
-export default MiniPreview;
+};

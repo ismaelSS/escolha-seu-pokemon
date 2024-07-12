@@ -6,18 +6,15 @@ import { commonAnimationSettings } from "..";
 import gsap from "gsap";
 
 
-const AllPokemonMoves = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function AllPokemonMoves () {
   const {initialMoves} = useGenOne().pokemonselected
   const movesRef = useRef<HTMLDivElement>(null)
 
   useEffect(()=>{
     const moves = movesRef.current!.querySelectorAll('.moves');
-    // console.log( movesRef.current!.querySelectorAll('.moves'));
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        //@ts-ignore
-        trigger: ref.current,
         ...commonAnimationSettings.thirdTrigger
       }
     });
@@ -36,10 +33,6 @@ const AllPokemonMoves = forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
     <AllPokemonMovesStyle ref={movesRef}>
 
-      {/* {Object.entries(initialMoves).map(([name, type])=> (
-        <PokemonMove2 name={name} type={type} key={name} className="moves"/>
-      ))} */}
-
       {initialMoves.map((move, index) =>
       <PokemonMove2 name={move.name} type={move.type} key={index} className="moves"/>)
       }
@@ -47,8 +40,4 @@ const AllPokemonMoves = forwardRef<HTMLDivElement, {}>((props, ref) => {
     </AllPokemonMovesStyle>
   )
 
-});
-
-AllPokemonMoves.displayName = 'AllPokemonMoves';
-
-export default AllPokemonMoves;
+};

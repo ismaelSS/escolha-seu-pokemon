@@ -11,7 +11,7 @@ import gsap from "gsap";
 
 
 
-const MainCard = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function MainCard() {
   const {imagePath, name, types} = useGenOne().pokemonselected
   const imageRef = useRef(null!)
   const containerRef =useRef(null!)
@@ -23,8 +23,6 @@ useEffect(()=>{
     scale:1,
     ease:'power3.out',
     scrollTrigger:{
-      //@ts-ignore
-      trigger: ref.current,
       ...commonAnimationSettings.firstTrigger
     }
   });
@@ -39,8 +37,6 @@ useEffect(()=>{
     scale:1,
     ease:'power2.inOut',
     scrollTrigger:{
-      //@ts-ignore
-      trigger:ref.current,
       ...commonAnimationSettings.firstTrigger
     }
   })
@@ -59,15 +55,11 @@ useEffect(()=>{
         ref={imageRef}
       />
 
-      <TypesEvolutions ref={ref}/>
+      <TypesEvolutions/>
 
-      <MiniPreview ref={ref}/>
+      <MiniPreview/>
 
     </MainCardStyle>
 
   );
-});
-
-MainCard.displayName = 'MainCard';
-
-export default MainCard;
+};

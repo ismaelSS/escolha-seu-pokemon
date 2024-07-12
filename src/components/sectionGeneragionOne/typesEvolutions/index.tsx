@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { commonAnimationSettings } from "..";
 
 
-const TypesEvolutions = forwardRef<HTMLDivElement, {}>((props, ref) => {
+export default function TypesEvolutions() {
   const containerRef = useRef(null!)
 
   useEffect(()=>{
@@ -17,8 +17,6 @@ const TypesEvolutions = forwardRef<HTMLDivElement, {}>((props, ref) => {
       x:0,
       ease:'power2.out',
       scrollTrigger:{
-        //@ts-ignore
-        trigger: ref.current,
         ...commonAnimationSettings.secondTrigger
       }
     })
@@ -33,8 +31,4 @@ const TypesEvolutions = forwardRef<HTMLDivElement, {}>((props, ref) => {
     </TypesEvolutionsStyle>
 
   );
-});
-
-TypesEvolutions.displayName = 'TypesEvolutions';
-
-export default TypesEvolutions;
+};

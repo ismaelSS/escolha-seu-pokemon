@@ -4,9 +4,6 @@ import PokemonsTypesIcons from "@/components/pokemonsTypesIcons";
 import { GenOneTypesStyle } from "./styles";
 import { useGenOne } from "@/contexts/genOne.context";
 
-// interface iGenOneTypes {
-//   types: ('fire' | 'walter' | 'grass' | 'poison')[]
-// }
 
 export default function GenOneTypes () {
   const {types} = useGenOne().pokemonselected;

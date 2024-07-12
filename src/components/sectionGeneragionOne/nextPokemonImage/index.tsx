@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { commonAnimationSettings } from '..';
 
-const NextPokemonImage = forwardRef<HTMLDivElement>((props, ref) => {
+export default function NextPokemonImage(){
 
   const {setPokemon, nextPokemon} = useGenOne()
   const imageRef = useRef<HTMLDivElement>(null)
@@ -23,8 +23,6 @@ const NextPokemonImage = forwardRef<HTMLDivElement>((props, ref) => {
       filter:'blur(0px)',
       ease:'Power2.out',
       scrollTrigger:{
-        //@ts-ignore
-        trigger: ref.current,
         ...commonAnimationSettings.secondTrigger
       }
     })
@@ -45,8 +43,4 @@ const NextPokemonImage = forwardRef<HTMLDivElement>((props, ref) => {
       />
     </NextPokemonImageStyle>
   )
-})
-
-NextPokemonImage.displayName = 'NextPokemonImage';
-
-export default NextPokemonImage;
+};

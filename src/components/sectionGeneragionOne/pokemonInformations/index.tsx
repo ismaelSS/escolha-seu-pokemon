@@ -8,7 +8,8 @@ import { forwardRef, useEffect, useRef } from 'react';
 import { commonAnimationSettings } from '..';
 import gsap from 'gsap';
 
-const PokemonInformations = forwardRef<HTMLDivElement, {}>((props, ref) => {
+
+export default function PokemonInformations(){
   const { secondaryColor } = useGenOne().pokemonselected;
   const containerRef = useRef<HTMLDivElement>(null);
   const valorInicialRef = useRef<number | undefined>(undefined);
@@ -22,8 +23,6 @@ const PokemonInformations = forwardRef<HTMLDivElement, {}>((props, ref) => {
       }, {
         width: valorInicialRef.current - 20,
         scrollTrigger: {
-          //@ts-ignore
-          trigger: ref.current,
           ...commonAnimationSettings.secondTrigger
         }
       });
@@ -33,16 +32,12 @@ const PokemonInformations = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
   return (
     <PokemonInformationsStyle style={{ backgroundColor: secondaryColor }} ref={containerRef}>
-      <PokemonName ref={ref}/>
-      <AllPokemonMoves ref={ref}/>
+      <PokemonName/>
+      <AllPokemonMoves/>
       <div className='status-select'>
-        <AllPokemonStatus ref={ref}/>
+        <AllPokemonStatus/>
         <Button3d />
       </div>
     </PokemonInformationsStyle>
   );
-});
-
-PokemonInformations.displayName = 'PokemonInformations';
-
-export default PokemonInformations;
+};
