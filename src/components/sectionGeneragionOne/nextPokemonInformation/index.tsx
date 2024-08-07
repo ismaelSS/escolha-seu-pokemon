@@ -3,11 +3,12 @@ import { useGenOne } from '@/contexts/genOne.context';
 import { NextPokemonBasicInformationsStyle } from './styles';
 import NextPokemonStatus from '../nextPokemonStatus';
 import PokemonsTypesIcons from '@/components/pokemonsTypesIcons';
-import StatsChart from '../statsChart';
 import gsap from 'gsap';
 import { commonAnimationSettings } from '..';
+import dynamic from 'next/dynamic';
+const StatsChart = dynamic(() => import("../statsChart"), { ssr: false })
 
-export default function NextPokemonBasicInformations(){
+export default function NextPokemonBasicInformations() {
   const { secondaryColor, name, types } = useGenOne().nextPokemon;
   const nextPokemonInformationsRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
@@ -16,12 +17,12 @@ export default function NextPokemonBasicInformations(){
   useEffect(() => {
     //@ts-ignore
     if (nextPokemonInformationsRef.current) {
-        gsap.fromTo(nextPokemonInformationsRef.current, {
-          x: -200,
-          opacity: 0.5
-        },
+      gsap.fromTo(nextPokemonInformationsRef.current, {
+        x: -200,
+        opacity: 0.5
+      },
         {
-          x:0,
+          x: 0,
           opacity: 1,
           scrollTrigger: {
             ...commonAnimationSettings.firstTrigger
@@ -29,27 +30,27 @@ export default function NextPokemonBasicInformations(){
         }
       );
 
-    gsap.fromTo(titleRef.current,{
-      y:-30,
-      opacity: 0.5,
-    },{
-      y:0,
-      opacity:1,
-      scrollTrigger:{
-        ...commonAnimationSettings.secondTrigger
-      },
-    });
-    gsap.fromTo(informationsRef.current,{
-      y:300,
-      opacity: 0.1,
-    },{
-      y:0,
-      opacity:1,
-      ease:'Power2.out',
-      scrollTrigger:{
-        ...commonAnimationSettings.secondTrigger
-      },
-    })
+      gsap.fromTo(titleRef.current, {
+        y: -30,
+        opacity: 0.5,
+      }, {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          ...commonAnimationSettings.secondTrigger
+        },
+      });
+      gsap.fromTo(informationsRef.current, {
+        y: 300,
+        opacity: 0.1,
+      }, {
+        y: 0,
+        opacity: 1,
+        ease: 'Power2.out',
+        scrollTrigger: {
+          ...commonAnimationSettings.secondTrigger
+        },
+      })
     }
   }, []);
 
@@ -65,7 +66,9 @@ export default function NextPokemonBasicInformations(){
             ))}
           </div>
         </div>
+
         <StatsChart />
+
       </div>
     </NextPokemonBasicInformationsStyle>
   );

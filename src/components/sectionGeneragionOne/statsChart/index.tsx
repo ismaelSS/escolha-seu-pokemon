@@ -37,7 +37,7 @@ export default function StatsChart () {
       max: 60,
       labels: {
         style: {
-          colors: ['#000','#000','#000'], // Altera a cor dos números no eixo Y
+          colors: ['#000','#000','#000'],
           fontSize: '8px',
         },
       },
