@@ -12,7 +12,7 @@ export default function FireAnimation() {
 
 
 
-  const defaultOptions = (data:any) =>  {
+  const defaultOptions = (data:{data:object}) =>  {
     return{
       loop: false,
       autoplay: true,
