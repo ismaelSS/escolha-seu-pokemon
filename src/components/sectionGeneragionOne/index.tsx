@@ -39,43 +39,19 @@ export default function SectionGeneratioOne() {
   const { mainColor, animation } = useGenOne().pokemonselected;
   const { isActiveAnimation } = useGenOne();
 
-  const [minWidthDisplay, setMinWidthDisplay] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (typeof window !== 'undefined') {
-        setMinWidthDisplay(window.innerWidth <= 710);
-      }
-    };
-
-    handleResize();
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', handleResize);
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('resize', handleResize);
-      }
-    };
-  }, []);
-
   return (
     <SectionGeneratioOneStyle
       style={{ backgroundColor: mainColor }}
       className='sectionGenOne'
     >
-      <p className="incompatibleDevice">{minWidthDisplay.toString()}</p>
-      {
-        minWidthDisplay ?
           <p className="incompatibleDevice">Por favor use um dispositivo maior</p>
-          :
+
           <div className="mainContainer">
             <LeftContainer />
             <RightContainer />
             {isActiveAnimation && animations[animation]}
           </div>
-      }
+
     </SectionGeneratioOneStyle>
   );
 }

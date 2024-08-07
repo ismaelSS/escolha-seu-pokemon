@@ -37,7 +37,8 @@ export const SectionGeneratioOneStyle = styled.div`
   font-weight: 700;
   position: absolute;
   z-index:50;
-  align-self:center
+  align-self:center;
+  display:none
 }
 
 @media(max-width: 739px){
@@ -49,6 +50,19 @@ export const SectionGeneratioOneStyle = styled.div`
   .mainContainer{
     transform:scale(0.85)
   }
+  .incompatibleDevice{
+    display:inline-block
+  }
+}
+
+@media(max-width: 710px){
+  .mainContainer{
+    display:hidden
+  }
+  .incompatibleDevice{
+    display:visible
+  }
+
 }
 
 `;
