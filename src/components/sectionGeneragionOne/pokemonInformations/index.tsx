@@ -4,7 +4,7 @@ import { PokemonInformationsStyle } from './styles';
 import AllPokemonStatus from '@/components/allPokemonStatus';
 import Button3d from '@/components/buttons/button3d';
 import AllPokemonMoves from '../allpokemonMoves';
-import { forwardRef, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { commonAnimationSettings } from '..';
 import gsap from 'gsap';
 

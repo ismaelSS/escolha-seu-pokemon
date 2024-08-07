@@ -5,7 +5,7 @@ import Image from "next/image";
 import { MainCardStyle } from "./styles";
 import TypesEvolutions from "../typesEvolutions";
 import MiniPreview from "../miniPreview";
-import { forwardRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { commonAnimationSettings } from "..";
 import gsap from "gsap";
 

@@ -1,9 +1,8 @@
 import { useGenOne } from "@/contexts/genOne.context";
 import StatusCell from "../statusCell";
 import { AllPokemonStatusStyle } from "./styles";
-import { forwardRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { commonAnimationSettings } from "../sectionGeneragionOne";
 
 

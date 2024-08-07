@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import MainCard from "../mainCard"
 import PokemonInformations from "../pokemonInformations"
 import { LeftContainerStyle } from "./styles"

@@ -7,7 +7,7 @@ import { SectionGeneratioOneStyle } from "./styles";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import animations from "../animations";
 
 export const commonAnimationSettings = {
@@ -41,7 +41,7 @@ export default function SectionGeneratioOne() {
   const { isActiveAnimation } = useGenOne();
   const mainContainerRef = useRef<HTMLDivElement>(null);
 
-  // const largura = window.innerWidth < 
+  // const largura = window.innerWidth <
 
 
 

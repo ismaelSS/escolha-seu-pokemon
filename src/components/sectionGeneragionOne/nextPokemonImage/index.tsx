@@ -1,9 +1,8 @@
 import { useGenOne } from '@/contexts/genOne.context'
 import { NextPokemonImageStyle } from './styles'
 import Image from 'next/image'
-import { forwardRef, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import { commonAnimationSettings } from '..';
 
 export default function NextPokemonImage(){

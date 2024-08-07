@@ -1,7 +1,7 @@
 import { useGenOne } from "@/contexts/genOne.context";
 import PokemonMove2 from "../pokemonMove2";
 import { AllPokemonMovesStyle } from "./styles";
-import { forwardRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { commonAnimationSettings } from "..";
 import gsap from "gsap";
 

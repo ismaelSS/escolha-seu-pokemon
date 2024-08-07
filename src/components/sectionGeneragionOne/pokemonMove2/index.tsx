@@ -7,7 +7,7 @@ import PokemonsTypesIcons from "@/components/pokemonsTypesIcons";
 interface iPokemonMove2 {
   name: string,
   type: tPokemonTypes
-  className: string
+  className?: string
 }
 
 export default function PokemonMove2({name, type, className}: iPokemonMove2) {

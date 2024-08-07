@@ -1,9 +1,7 @@
 import { techStack } from "@/fakeData/projectData";
 import Insignea from "../insignea";
-import ProjectTitle from "../projectTitle";
 import IntroductionStyled from "./styles";
 import { TbBrandNextjs } from "react-icons/tb";
-import CustomIcon from "../customIcon";
 import Image from "next/image";
 import { archivo_Black } from "@/app/fonts";
 

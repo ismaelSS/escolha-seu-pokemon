@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import NextPokemonImage from "../nextPokemonImage";
 import NextPokemonBasicInformations from "../nextPokemonInformation";
 import { RightContainerStyle } from "./styles";

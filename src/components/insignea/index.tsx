@@ -1,8 +1,6 @@
-import { IconType } from "react-icons";
 import InsigneaStyle from "./styles";
 import { PiHexagonDuotone } from "react-icons/pi";
 import Image from "next/image";
-import Link from "next/link";
 
 interface iInsignea {
   description: string;

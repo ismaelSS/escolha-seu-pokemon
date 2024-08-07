@@ -1,11 +1,10 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useGenOne } from '@/contexts/genOne.context';
 import { NextPokemonBasicInformationsStyle } from './styles';
 import NextPokemonStatus from '../nextPokemonStatus';
 import PokemonsTypesIcons from '@/components/pokemonsTypesIcons';
 import StatsChart from '../statsChart';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import { commonAnimationSettings } from '..';
 
 export default function NextPokemonBasicInformations(){

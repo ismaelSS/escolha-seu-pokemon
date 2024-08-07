@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MiniPreviewStyle } from "./style";
 import { useGenOne } from "@/contexts/genOne.context";
-import { forwardRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { commonAnimationSettings } from "..";
 

@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Evolutions from "../evolutions";
 import GenOneTypes from "../genOneTypes";
 import { TypesEvolutionsStyle } from "./styles";
