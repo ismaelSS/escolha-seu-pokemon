@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Archivo_Black } from 'next/font/google'
 import "./globals.css";
 import CustomHeader from "@/components/customHeader";
+import { inter } from "./fonts";
 
-
-
-export const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: "escolha seu inicial",
