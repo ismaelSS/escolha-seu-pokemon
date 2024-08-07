@@ -11,7 +11,7 @@ export default function WaterAnimation() {
   const [isFirstStage, setIsFirstStage] = useState(true)
 
 
-
+  //@ts-ignore
   const defaultOptions = (data:any) =>  {
     return{
       loop: false,

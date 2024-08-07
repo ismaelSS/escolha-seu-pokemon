@@ -11,8 +11,8 @@ export default function FireAnimation() {
   const [isFirstAnimation, setIsFirstAnimation] = useState(true)
 
 
-
-  const defaultOptions = (data:{data:object}) =>  {
+  //@ts-ignore
+  const defaultOptions = (data:any) =>  {
     return{
       loop: false,
       autoplay: true,
