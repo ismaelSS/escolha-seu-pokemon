@@ -1,6 +1,7 @@
 import InsigneaStyle from "./styles";
 import { PiHexagonDuotone } from "react-icons/pi";
 import Image from "next/image";
+import Link from "next/link";
 
 interface iInsignea {
   description: string;
@@ -20,11 +21,9 @@ export default function Insignea({
   link
 }: iInsignea) {
 
-  const handleRedirect = () => {
-    window.open(link, '_blank');
-  };
   return (
-    <InsigneaStyle $size={size} onClick={handleRedirect}>
+    <InsigneaStyle $size={size}>
+      <Link href={link} target="_blank">
       <p className="description">{description}</p>
       <PiHexagonDuotone size={'100%'} className="insigneaFrame" id="insignea" color={iconFrameColor} />
 
@@ -35,6 +34,7 @@ export default function Insignea({
         <TechIcon size={'70%'} className="techIcon" />
       }
 
+      </Link>
     </InsigneaStyle>
   );
 }

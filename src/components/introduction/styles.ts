@@ -18,7 +18,7 @@ const IntroductionStyled = styled.section`
 
   .myImage {
     position: absolute;
-    right: -2%;
+    right: 1%;
     bottom: 0;
     height: 70vh;
     width: 70vh;
