@@ -18,7 +18,6 @@ export default function Home() {
         <GenOneProvider>
           <SectionGeneratioOne/>
         </GenOneProvider>
-        {/* <Conclusion/> */}
       </main>
       <footer >
 

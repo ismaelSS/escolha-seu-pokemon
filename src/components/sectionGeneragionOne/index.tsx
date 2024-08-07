@@ -47,14 +47,13 @@ export default function SectionGeneratioOne() {
       setMinWidthDisplay(window.innerWidth <= 710);
     };
 
+    handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Limpa o event listener quando o componente é desmontado
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
 
 
   return (
