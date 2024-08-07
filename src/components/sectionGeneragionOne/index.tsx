@@ -7,7 +7,6 @@ import { SectionGeneratioOneStyle } from "./styles";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useState } from "react";
 import animations from "../animations";
 
 export const commonAnimationSettings = {
