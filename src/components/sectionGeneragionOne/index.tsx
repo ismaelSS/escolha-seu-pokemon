@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
 import animations from "../animations";
 
 export const commonAnimationSettings = {
-
   firstTrigger: {
     trigger: '.sectionGenOne',
     start: '-20% center',
@@ -24,7 +23,7 @@ export const commonAnimationSettings = {
     start: '20% center',
     end: '45% center',
     scrub: true
-    // markers:true,
+    // markers: true,
   },
   thirdTrigger: {
     trigger: '.sectionGenOne',
@@ -40,33 +39,37 @@ export default function SectionGeneratioOne() {
   const { mainColor, animation } = useGenOne().pokemonselected;
   const { isActiveAnimation } = useGenOne();
 
-  const [minWidthDisplay, setMinWidthDisplay] = useState(window.innerWidth <= 710);
+  const [minWidthDisplay, setMinWidthDisplay] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setMinWidthDisplay(window.innerWidth <= 710);
+      if (typeof window !== 'undefined') {
+        setMinWidthDisplay(window.innerWidth <= 710);
+      }
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+    }
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
     };
   }, []);
-
 
   return (
     <SectionGeneratioOneStyle
       style={{ backgroundColor: mainColor }}
-      //@ts-ignore
       className='sectionGenOne'
     >
-      <p className="incompatibleDevice">{minWidthDisplay}</p>
+      <p className="incompatibleDevice">{minWidthDisplay.toString()}</p>
       {
         minWidthDisplay ?
-        <p className="incompatibleDevice">Por favor use um díspositivo maior</p>
-        :
+          <p className="incompatibleDevice">Por favor use um dispositivo maior</p>
+          :
           <div className="mainContainer">
             <LeftContainer />
             <RightContainer />
