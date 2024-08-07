@@ -9,7 +9,7 @@ const IntroductionStyled = styled.section`
   position: relative;
   z-index: 10;
   background-color: blue;
-  background-image: url('/introductionBackground.jpg');
+  background-image: url('/introductionBackground.webp');
   overflow: hidden;
 
   h1 {

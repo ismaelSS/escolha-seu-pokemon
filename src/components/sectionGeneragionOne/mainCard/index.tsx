@@ -12,7 +12,7 @@ import gsap from "gsap";
 
 
 export default function MainCard() {
-  const {imagePath, name, types} = useGenOne().pokemonselected
+  const {imagePath, name} = useGenOne().pokemonselected
   const imageRef = useRef(null!)
   const containerRef =useRef(null!)
 

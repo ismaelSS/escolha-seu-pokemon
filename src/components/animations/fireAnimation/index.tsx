@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Lottie from 'react-lottie';
 import fireWalkerAnimation from '../../../../public/svg/Animation - fireWalker.json';
 import fireExplosionAnimation from '../../../../public/svg/Animation - fireExplosion.json';

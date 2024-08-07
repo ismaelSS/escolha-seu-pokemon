@@ -42,7 +42,7 @@ export default function Introduction() {
         </div>
       </div>
 
-      <Image className="myImage" width={600} height={600} src='/ismael_mestre_pokemon.png' alt='desenho de ismael como treinador pokemon' />
+      <Image className="myImage" width={600} height={600} src='/ismael_mestre_pokemon.webp' alt='desenho de ismael como treinador pokemon' />
 
     </IntroductionStyled>
 

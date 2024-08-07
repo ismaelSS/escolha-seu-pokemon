@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Lottie from 'react-lottie';
 import waterSplashAnimation from '../../../../public/svg/Animation - waterSplash.json';
 import waterWalkerAnimation from '../../../../public/svg/Animation - waterWalker.json';

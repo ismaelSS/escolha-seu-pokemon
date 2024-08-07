@@ -32,6 +32,13 @@ export const SectionGeneratioOneStyle = styled.div`
   -moz-box-shadow: -12.5px 7.5px 19px -4px #000000;
   box-shadow: -12.5px 7.5px 19px -4px #000000;
 }
+.incompatibleDevice{
+  font-size: 2rem;
+  font-weight: 700;
+  position: absolute;
+  z-index:50;
+  align-self:center
+}
 
 @media(max-width: 739px){
   .mainContainer{

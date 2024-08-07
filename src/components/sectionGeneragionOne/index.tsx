@@ -7,7 +7,7 @@ import { SectionGeneratioOneStyle } from "./styles";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
 import animations from "../animations";
 
 export const commonAnimationSettings = {
@@ -19,14 +19,14 @@ export const commonAnimationSettings = {
     scrub: true,
     // markers: true,
   },
-  secondTrigger:{
+  secondTrigger: {
     trigger: '.sectionGenOne',
-    start:'20% center',
-    end:'45% center',
-    scrub:true
+    start: '20% center',
+    end: '45% center',
+    scrub: true
     // markers:true,
   },
-  thirdTrigger:{
+  thirdTrigger: {
     trigger: '.sectionGenOne',
     start: "35% center",
     end: "50% center",
@@ -39,9 +39,21 @@ export default function SectionGeneratioOne() {
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   const { mainColor, animation } = useGenOne().pokemonselected;
   const { isActiveAnimation } = useGenOne();
-  const mainContainerRef = useRef<HTMLDivElement>(null);
 
-  // const largura = window.innerWidth <
+  const [minWidthDisplay, setMinWidthDisplay] = useState(window.innerWidth <= 710);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMinWidthDisplay(window.innerWidth <= 710);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Limpa o event listener quando o componente é desmontado
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
 
 
@@ -49,14 +61,19 @@ export default function SectionGeneratioOne() {
     <SectionGeneratioOneStyle
       style={{ backgroundColor: mainColor }}
       //@ts-ignore
-      ref={mainContainerRef}
       className='sectionGenOne'
     >
-      <div className="mainContainer">
-        <LeftContainer/>
-        <RightContainer/>
-        {isActiveAnimation && animations[animation]}
-      </div>
+      <p className="incompatibleDevice">{minWidthDisplay}</p>
+      {
+        minWidthDisplay ?
+        <p className="incompatibleDevice">Por favor use um díspositivo maior</p>
+        :
+          <div className="mainContainer">
+            <LeftContainer />
+            <RightContainer />
+            {isActiveAnimation && animations[animation]}
+          </div>
+      }
     </SectionGeneratioOneStyle>
   );
 }

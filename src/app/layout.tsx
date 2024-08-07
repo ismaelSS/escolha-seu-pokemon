@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import CustomHeader from "@/components/customHeader";
 import { inter } from "./fonts";
 
 

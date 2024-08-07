@@ -30,9 +30,9 @@ export interface iPokemon {
 export const pokemonsGen1:iPokemon[] = [
   {
     name:'Charmander',
-    imagePath:'/charmander.png',
+    imagePath:'/charmander.webp',
     previewPath:'/preview-charmander.gif',
-    backGroundPath:'/background-canyon.jpg',
+    backGroundPath:'/background-canyon.webp',
     animation:'fire',
     mainColor: '#FA4533',
     secondaryColor:'#9D271B',
@@ -67,9 +67,9 @@ export const pokemonsGen1:iPokemon[] = [
   },
   {
     name:'Squirtle',
-    imagePath:'/squirtle.png',
+    imagePath:'/squirtle.webp',
     previewPath:'/preview-squirtle.gif',
-    backGroundPath:'/background-coast.jpg',
+    backGroundPath:'/background-coast.webp',
     animation:'water',
     mainColor: '#33AFFA',
     secondaryColor:'#1B71A5',
@@ -104,9 +104,9 @@ export const pokemonsGen1:iPokemon[] = [
   },
   {
     name:'Bulbassauro',
-    imagePath:'/bulbasour.png',
+    imagePath:'/bulbasour.webp',
     previewPath:'/preview-bulbasour.gif',
-    backGroundPath:'/background-forest.jpg',
+    backGroundPath:'/background-forest.webp',
     animation:'grass',
     mainColor:'#33FA8A',
     secondaryColor:'#1DA559',

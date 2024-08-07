@@ -1,6 +1,5 @@
 import { tPokemonTypes } from "@/fakeData/pokeData";
 import { PokemonMove2Styled } from "./style";
-import { IoIosWater } from "react-icons/io";
 import PokemonsTypesIcons from "@/components/pokemonsTypesIcons";
 
 
