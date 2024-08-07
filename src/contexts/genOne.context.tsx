@@ -1,6 +1,6 @@
 'use client';
 
-import { pokemonsGen1, iPokemon } from "@/pokeData/pokeData";
+import { pokemonsGen1, iPokemon } from "@/fakeData/pokeData";
 import { createContext, MutableRefObject, ReactNode, useContext, useRef, useState } from "react";
 
 type tGen1ContextProps = {

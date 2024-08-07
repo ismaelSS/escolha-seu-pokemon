@@ -2,9 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,7 +21,7 @@ time, mark, audio, video {
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: "Montserrat", sans-serif;
+	/* font-family: "Montserrat", sans-serif; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -33,6 +30,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	display: flex;
+	align-items: center;
+	background-color: #C2C2C2;
+
 }
 ol, ul {
 	list-style: none;

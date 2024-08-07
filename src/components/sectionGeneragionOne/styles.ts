@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const SectionGeneratioOneStyle = styled.div`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,7 @@ export const SectionGeneratioOneStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index:30;
 
 
   background: rgba(145,141,141,0.45);
@@ -31,6 +32,18 @@ export const SectionGeneratioOneStyle = styled.div`
   -moz-box-shadow: -12.5px 7.5px 19px -4px #000000;
   box-shadow: -12.5px 7.5px 19px -4px #000000;
 }
+
+@media(max-width: 739px){
+  .mainContainer{
+    transform:scale(0.95)
+  }
+}
+@media(max-width: 725px){
+  .mainContainer{
+    transform:scale(0.85)
+  }
+}
+
 `;
 
 

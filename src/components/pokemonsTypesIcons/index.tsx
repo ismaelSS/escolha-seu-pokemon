@@ -3,7 +3,7 @@ import { FaFire } from "react-icons/fa";
 import { IoIosWater } from "react-icons/io";
 import { MdGrass } from "react-icons/md";
 import { theme } from "@/constants/theme";
-import { tPokemonTypes } from "@/pokeData/pokeData";
+import { tPokemonTypes } from "@/fakeData/pokeData";
 import { FaCircleNotch } from "react-icons/fa6";
 
 

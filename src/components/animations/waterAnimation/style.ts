@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-
 export const WaterAnimationStyle = styled.div `
-
   pointer-events:none;
   position:absolute;
   z-index: 10;

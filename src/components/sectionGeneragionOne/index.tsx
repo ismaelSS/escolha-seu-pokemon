@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import animations from "../animations";
 
 export const commonAnimationSettings = {
+
   firstTrigger: {
     trigger: '.sectionGenOne',
     start: '-20% center',
@@ -39,6 +40,9 @@ export default function SectionGeneratioOne() {
   const { mainColor, animation } = useGenOne().pokemonselected;
   const { isActiveAnimation } = useGenOne();
   const mainContainerRef = useRef<HTMLDivElement>(null);
+
+  // const largura = window.innerWidth < 
+
 
 
   return (
